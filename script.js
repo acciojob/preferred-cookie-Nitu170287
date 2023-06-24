@@ -6,4 +6,14 @@ saveInput.addEventListener("click",()=>{
 	// console.log(fontSize,fontColor)
 	document.cookie = "fontColor="+fontColor+"; expires= Fri, 25 June 2023 12:00:00 UTC; path=/";
 	document.cookie = "fontSize="+fontSize+"; expires= Fri, 25 June 2023 12:00:00 UTC; path=/";
-})
+}) 
+
+function showCookieValue(){
+document.querySelector('#fontsize').value = getCookie("fontSize")
+	document.querySelector('input[type="color"]').value = getCookie("fontColor")
+}
+
+function getCookie(key){
+	return  document.cookie.split("; ")
+	 .find((row) => row.startsWith(key)).split("=")[1]
+}
