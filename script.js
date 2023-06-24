@@ -4,16 +4,16 @@ saveInput.addEventListener("click",()=>{
 	let fontSize = document.querySelector('#fontsize').value
 	let fontColor = document.querySelector('input[type="color"]').value
 	// console.log(fontSize,fontColor)
-	document.cookie = "fontColor="+fontColor+"; expires= Fri, 25 June 2023 12:00:00 UTC; path=/";
-	document.cookie = "fontSize="+fontSize+"; expires= Fri, 25 June 2023 12:00:00 UTC; path=/";
+	document.cookie = "fontcolor="+fontColor+"; expires= Fri, 25 June 2023 12:00:00 UTC; path=/";
+	document.cookie = "fontsize="+fontSize+"; expires= Fri, 25 June 2023 12:00:00 UTC; path=/";
 }) 
 
 function showCookieValue(){
-let fontSizeCookie = getCookie("fontSize")
+let fontSizeCookie = getCookie("fontsize")
 	if(fontSizeCookie){
 		document.querySelector('#fontsize').value = fontSizeCookie 
 	}
-	let fontColorCookie =getCookie("fontColor")
+	let fontColorCookie =getCookie("fontcolor")
 	if(fontColorCookie){
 		document.querySelector('input[type="color"]').value = fontColorCookie 
 	}
