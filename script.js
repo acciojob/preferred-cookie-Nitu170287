@@ -9,8 +9,16 @@ saveInput.addEventListener("click",()=>{
 }) 
 
 function showCookieValue(){
-document.querySelector('#fontsize').value = getCookie("fontSize")
-	document.querySelector('input[type="color"]').value = getCookie("fontColor")
+let fontSizeCookie = getCookie("fontSize")
+	if(fontSizeCookie){
+		document.querySelector('#fontsize').value = fontSizeCookie 
+	}
+	let fontColorCookie =getCookie("fontColor")
+	if(fontColorCookie){
+		document.querySelector('input[type="color"]').value = fontColorCookie 
+	}
+
+	
 }
 
 function getCookie(key){
