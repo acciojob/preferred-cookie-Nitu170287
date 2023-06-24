@@ -22,6 +22,12 @@ let fontSizeCookie = getCookie("fontSize")
 }
 
 function getCookie(key){
-	return  document.cookie.split("; ")
-	 .find((row) => row.startsWith(key)).split("=")[1]
+	let cookies =  document.cookie.split("; ")
+	 .find((row) => row.startsWith(key))
+	if(cookies){
+		return cookies.split("=")[1]
+	}else{
+		return undefined
+	}
+	
 }
